@@ -1,2 +1,4 @@
 /target
 *.iso
+limine/
+iso_root/
