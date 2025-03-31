@@ -1,0 +1,15 @@
+[package]
+name = "lithium-kernel"
+version = "0.1.0"
+edition = "2024"
+authors = ["Liam Greenway <liamgr33nway@gmail.com>"]
+
+[dependencies]
+limine = "0.4.0"
+flanterm_bindings = "1.1.4"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
