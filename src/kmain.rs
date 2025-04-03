@@ -1,12 +1,13 @@
 #![no_std]
 #![no_main]
 
-mod arch;
+pub mod arch;
 
 use core::panic::PanicInfo;
 
-#[unsafe(no_mangle)]
-pub extern "C" fn kmain() {}
+pub fn kmain() {
+    
+}
 
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {

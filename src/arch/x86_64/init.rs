@@ -1,6 +1,7 @@
 use limine::BaseRevision;
 use limine::framebuffer::Framebuffer;
 use limine::request::{FramebufferRequest, RequestsEndMarker, RequestsStartMarker};
+use crate::kmain;
 
 #[unsafe(link_section = ".requests")]
 static BASE_REVISION: BaseRevision = BaseRevision::new();
@@ -15,9 +16,7 @@ static _START_MARKER: RequestsStartMarker = RequestsStartMarker::new();
 static _END_MARKER: RequestsEndMarker = RequestsEndMarker::new();
 
 #[unsafe(no_mangle)]
-pub fn init() {
+pub extern "C" fn init() {
     assert!(BASE_REVISION.is_supported());
-    loop {
-
-    }
+    
 }
